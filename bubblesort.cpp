@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
- 
+ // code for implememnting bubble sort
 void swap(int *xp, int *yp)
 {
     int temp = *xp;
