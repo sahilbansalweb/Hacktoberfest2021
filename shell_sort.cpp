@@ -1,54 +1,51 @@
-// C++ implementation of Shell Sort
-#include <iostream>
+#include<iostream>
+ 
 using namespace std;
-
-/* function to sort arr using shellSort */
-int shellSort(int arr[], int n)
+ 
+// A function implementing Shell sort.
+void ShellSort(int a[], int n)
 {
-	// Start with a big gap, then reduce the gap
-	for (int gap = n/2; gap > 0; gap /= 2)
+	int i, j, k, temp;
+	// Gap 'i' between index of the element to be compared, initially n/2.
+	for(i = n/2; i > 0; i = i/2)
 	{
-		// Do a gapped insertion sort for this gap size.
-		// The first gap elements a[0..gap-1] are already in gapped order
-		// keep adding one more element until the entire array is
-		// gap sorted
-		for (int i = gap; i < n; i += 1)
+		for(j = i; j < n; j++)
 		{
-			// add a[i] to the elements that have been gap sorted
-			// save a[i] in temp and make a hole at position i
-			int temp = arr[i];
-
-			// shift earlier gap-sorted elements up until the correct
-			// location for a[i] is found
-			int j;		
-			for (j = i; j >= gap && arr[j - gap] > temp; j -= gap)
-				arr[j] = arr[j - gap];
-			
-			// put temp (the original a[i]) in its correct location
-			arr[j] = temp;
+			for(k = j-i; k >= 0; k = k-i)
+			{
+				// If value at higher index is greater, then break the loop.
+				if(a[k+i] >= a[k])
+				break;
+				// Switch the values otherwise.
+				else
+				{
+					temp = a[k];
+					a[k] = a[k+i];
+					a[k+i] = temp;
+				}
+			}
 		}
 	}
-	return 0;
 }
-
-void printArray(int arr[], int n)
-{
-	for (int i=0; i<n; i++)
-		cout << arr[i] << " ";
-}
-
 int main()
-{
-	int arr[] = {12, 34, 54, 2, 3}, i;
-	int n = sizeof(arr)/sizeof(arr[0]);
-
-	cout << "Array before sorting: \n";
-	printArray(arr, n);
-
-	shellSort(arr, n);
-
-	cout << "\nArray after sorting: \n";
-	printArray(arr, n);
-
+{	
+	int n, i;
+	cout<<"\nEnter the number of data element to be sorted: ";
+	cin>>n;
+ 
+	int arr[n];
+	for(i = 0; i < n; i++)
+	{
+		cout<<"Enter element "<<i+1<<": ";
+		cin>>arr[i];
+	}
+ 
+	ShellSort(arr, n);
+ 
+	// Printing the sorted data.
+	cout<<"\nSorted Data ";
+	for (i = 0; i < n; i++)
+		cout<<"->"<<arr[i];
+ 
 	return 0;
 }
