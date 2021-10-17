@@ -1,0 +1,39 @@
+
+import java.util.*;
+
+public class Train_Arrival {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+       
+        ArrayList<Integer> arrival=new ArrayList<>();
+        ArrayList<Integer> dept=new ArrayList<>();
+        while(n--!=0)
+        {
+            int a=sc.nextInt();
+            int b=sc.nextInt();
+          
+            arrival.add(a);
+            dept.add(a+b);
+        }
+
+        Collections.sort(arrival);
+        Collections.sort(dept);
+       
+        int i = 1, j = 0,r=0,p=1; 
+        while (i < arrival.size() && j < dept.size()) { 
+            if (arrival.get(i) <= dept.get(j)) { 
+                p++; 
+                i++; 
+            }else if (arrival.get(i) > dept.get(j)) { 
+                p--; 
+                j++; 
+            } 
+
+            if (p> r) 
+                r = p; 
+        } 
+        System.out.println(r);
+        
+    }
+}
