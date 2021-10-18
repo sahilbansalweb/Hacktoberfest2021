@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string.h>
+
  using namespace std;
 int i,j,m,n,c[20][20];
 string x, y;
