@@ -1,6 +1,6 @@
-##This directory contains solutions to these problems using recursion techinue.
-#Filename is named after the sNO.
-#Contributed by VIGBALITY
+# This directory contains solutions to these problems using recursion techinue.
+## Filename is named after the sNO.
+## Contributed by VIGBALITY
 
 1. To count number of vowels in a string
  
