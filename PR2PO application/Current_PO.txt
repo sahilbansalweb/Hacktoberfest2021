@@ -1,0 +1,38 @@
+			  Purchase Order# : 1
+			______________________
+
+
+
+Requisition#: 1				Issue Date :Sat Aug 28 20:15:34 2021
+
+
+Supplier : KC spare parts Ldt.
+
+Delivery Date: 12
+
+------------------------------------------------------------------------------
+                      ** Line Items ** 
+------------------------------------------------------------------------------
+Item_code		Quantity			Price			Total
+_________		_______			_____			_____
+
+ 15			2			 87			174
+
+
+
+
+
+
+Standard Terms And Conditions:
+
+1.PO should be acknowledge with 7 days of date of issue.
+2.PO will be null and void if good are not delivered by delivery date.
+3.Defective goods will be returned back to the supplier.
+4.Invoice can only be raised after 20 days of date of goods receipt.
+5.Damages during transit (if any) will be borne by the Supplier.
+
+
+
+
+
+ Authorised signature: 							 Total:174
