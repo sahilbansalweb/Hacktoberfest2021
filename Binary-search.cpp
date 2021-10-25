@@ -1,3 +1,4 @@
+//Program to run binary sort on an pre-existing array
 #include <bits/stdc++.h>
 using namespace std;
 int BinarySearch(int sorted_array[], int left, int right, int element) 
