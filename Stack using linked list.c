@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Node
+struct Node  //here we are creating a node with help of structure. Node has two field one is data another is link.
 {
     int data;
     struct Node *next;
@@ -9,7 +9,7 @@ struct Node
 
 struct Node *head = NULL;
 
-void push(int value)
+void push(int value) // This push function will help to insert the element into the stack.
 {
     struct Node *n = (struct Node *)malloc(sizeof(struct Node *));
     if (head == NULL)
@@ -25,7 +25,7 @@ void push(int value)
     head = n;
 }
 
-void pop()
+void pop()  //This pop function will remove the elements from the stack followed by LIFO order.
 {
     struct Node *temp = head;
     if (head == NULL)
@@ -65,7 +65,7 @@ void display()
     }
 }
 
-int main()
+int main(void)   //execution of each program start with main() function.
 {
     while (1)
     {
@@ -75,7 +75,7 @@ int main()
         printf("3. Peek\n");
         printf("4. Display\n");
         printf("5. Exit\n\n");
-        int c, n;
+        int c, n;  //variable declaration.
         scanf("%d", &c);
         switch (c)
         {
