@@ -68,10 +68,10 @@ int main()
 		printf("\n\n\t\t\t\tGame Draw!\n");
 	}
 	else if (result == 1) {
-		printf("\n\n\t\t\t\tWow! You have won the game!\n");
+		printf("\n\n\t\t\t\tWow! Good job! You have won the game!\n");
 	}
 	else {
-		printf("\n\n\t\t\t\tOh! You have lost the game!\n");
+		printf("\n\n\t\t\t\tOh no! You have lost the game!\n");
 	}
 		printf("\t\t\t\tYou choose : '%c' and Computer choose : '%c'\n", you, AI_response);
 
