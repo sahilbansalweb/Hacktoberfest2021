@@ -1,5 +1,5 @@
 import random
-
+#this is queens.py code
 def stochastic_hillclimbing(state):
     expand=0
     generate=0
